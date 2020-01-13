@@ -1,0 +1,24 @@
+{{> header}}
+<div class="row event-details">
+  <div class="col-md-12 text-center overflow-hidden">
+
+    <img class="details-img" src="{{info.imageURL}}" />
+    <div class="my-3 p-3">
+      <h2 class="display-5">{{info.name}}</h2>
+      <p class="infoType">Description:</p>
+      <p class="event-description">{{info.description}}</p>
+      <p class="infoType">Date: <small>{{info.dateTime}}</small></p>
+      <p class="infoType">People interested in: <small>{{info.peopleInterestedIn}}</small></p>
+      <p class="infoType">Organizer: <small>{{info.organizer}}</small></p>
+    </div>
+    {{#if creator}}
+    <a href="/edit/{{info._id}}" class="btn btn-primary btn-lg">Edit the event</a>
+    <a href="/delete/{{info._id}}" class="btn btn-danger btn-lg">Close the event</a>
+    {{else}}
+       {{#if liked}}
+    <a href="/like/{{info._id}}" class="btn btn-info btn-lg">Join the event</a>
+       {{/if}}
+    {{/if}}
+  </div>
+</div>
+{{> footer}}
