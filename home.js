@@ -11,6 +11,7 @@ export const home = {
                     ctx.data = data
                     ctx.loadPartials(partials)
                     .partial('./templates/home/home.hbs')
+                    ctx.redirect("/#")
                 })
 
         } else {
