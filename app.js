@@ -5,17 +5,17 @@ import{treks} from './treks.js'
 const app = Sammy('body', function(){
     this.use('Handlebars', 'hbs')
 
-    this.get('/', home.home)
+    this.get('#/', home.home)
 
-    this.get('/login', user.login)
+    this.get('#/login', user.login)
 
-    this.post('/login', user.postLogin)
+    this.post('#/login', user.postLogin)
 
-    this.get('/register', user.register)
+    this.get('#/register', user.register)
 
-    this.post('/register', user.postRegister)
+    this.post('#/register', user.postRegister)
 
-    this.get('/logout', user.logout)
+    this.get('#/logout', user.logout)
 
     this.get('#/create', treks.create)
 
