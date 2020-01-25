@@ -5,6 +5,8 @@ import{treks} from './treks.js'
 const app = Sammy('body', function(){
     this.use('Handlebars', 'hbs')
 
+    this.get('/', home.redirect)
+
     this.get('#/', home.home)
 
     this.get('#/login', user.login)

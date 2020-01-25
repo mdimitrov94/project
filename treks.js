@@ -19,7 +19,7 @@ export const treks = {
             likes: 0
         })
         displaySucces('Trek created successfully')
-        ctx.redirect('/')
+        ctx.redirect('#/')
     },
     details: async function (ctx) {
         getUserInfo(ctx)
@@ -51,13 +51,13 @@ export const treks = {
             likes
         })
         displaySucces('Trek edited successfully')
-        ctx.redirect(`/details/${ctx.params.id}`)
+        ctx.redirect(`#/details/${ctx.params.id}`)
     },
     delete: function(ctx) {
         getUserInfo(ctx)
         del('appdata', `treks/${ctx.params.id}`)
         displaySucces('You closed the trek successfully')
-        ctx.redirect('/')
+        ctx.redirect('#/')
     },
     like: async function(ctx) {
         getUserInfo(ctx)
@@ -77,7 +77,7 @@ export const treks = {
                     })
                     .then(() => {
                         displaySucces('You liked the trek successfully')
-                        ctx.redirect(`/details/${ctx.params.id}`)})
+                        ctx.redirect(`#/details/${ctx.params.id}`)})
                     
             })
     },
