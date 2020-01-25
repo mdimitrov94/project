@@ -7,7 +7,7 @@ const app = Sammy('body', function(){
 
     this.get('/', home.home)
 
-    this.get('/login', user.login)
+    this.get('//login', user.login)
 
     this.post('/login', user.postLogin)
 
