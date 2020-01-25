@@ -17,7 +17,7 @@ export const user = {
         post('user', 'login', { username, password }, 'Basic')
             .then(data => {
                 sessionInfo(data)
-                ctx.redirect('project/#/')
+                ctx.redirect('#/')
             })
             .catch(console.error);
     },
