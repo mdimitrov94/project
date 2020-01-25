@@ -17,7 +17,7 @@ export const user = {
         post('user', 'login', { username, password }, 'Basic')
             .then(data => {
                 sessionInfo(data)
-                ctx.redirect('/')
+                ctx.redirect('#/')
             })
             .catch(console.error);
     },
@@ -39,7 +39,7 @@ export const user = {
             post('user', '', { username, password, rePassword }, 'Basic')
                 .then(data => {
                     sessionInfo(data)
-                    ctx.redirect('/')
+                    ctx.redirect('#/')
                 })
                 .catch(console.error);
         }
@@ -49,7 +49,7 @@ export const user = {
         post('user', '_logout', {}, 'Kinvey')
             .then(() => {
                 sessionStorage.clear();
-                ctx.redirect('/');
+                ctx.redirect('#/');
             })
             .catch(console.error);
     }
