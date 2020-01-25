@@ -1,7 +1,7 @@
 {
   "name": "new",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +11,11 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1"
-  }
+  },
+  "devDependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "keywords": [],
+  "description": ""
 }
