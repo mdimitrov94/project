@@ -17,7 +17,9 @@ export const user = {
         post('user', 'login', { username, password }, 'Basic')
             .then(data => {
                 sessionInfo(data)
-                ctx.redirect('project/#/')
+                ctx.loadPartials(partials)
+                .partial('./templates/home/home.hbs')
+                ctx.redirect('#/')
             })
             .catch(console.error);
     },
