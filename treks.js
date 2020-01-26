@@ -94,7 +94,7 @@ export const treks = {
                     })
             })
         ctx.loadPartials(partials)
-            .partial('./templates/treks/profile.hbs')
+            .partial('../templates/treks/profile.hbs')
 
     }
 }
